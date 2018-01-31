@@ -1,0 +1,113 @@
+// Colors
+
+$blueLight: #7F8AFB;
+$blue: #1332F2;
+$blueDark: #160A69;
+$beige: #FFF3DD;
+$orange: #F36D37;
+$red: #A52025;
+$beigeLight: #FFF9F7;
+$pinkLight: #F9EFED;
+$pink: #FEE5E8;
+$greyUltraLight: #F5F5F5;
+$greyLight: #CFCFCF;
+$grey: #9D9D9D;
+$black: #000000;
+$white: #FFFFFF;
+$greySoft: #E8E8E8;
+$brownLight: #D5C8C2;
+$brow: #A79687;
+
+$colors: (
+  blueLight: $blueLight,
+  blue: $blue,
+  blueDark: $blueDark,
+  beige: $beige,
+  orange: $orange,
+  red: $red,
+  greyUltraLight: $greyUltraLight,
+  beigeLight: $beigeLight,
+  pinkLight: $pinkLight,
+  pink: $pink,
+  greyLight: $greyLight,
+  grey: $grey,
+  black: $black,
+  white: $white,
+  greySoft: $greySoft,
+  brownLight: $brownLight,
+  brow: $brow
+);
+
+// Font
+
+* {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+  margin: 0;
+  padding: 0;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+// Other scss
+
+// Menu
+
+.menu {
+  height: 20px;
+  position: absolute;
+  top: 45%;
+  left: 30px;
+  width: 20px;
+}
+
+.menu-stripe {
+  background-color: $black;
+  border-radius: 5px;
+  height: 2px;
+  margin-bottom: 5px;
+}
+
+// HomePage
+
+.home-title {
+  display: block;
+  font-size: 22.5px;
+  text-align: center;
+  width: 100%;
+}
+
+.home-gradien {
+  height: 625px;
+  background: linear-gradient(black, white);
+  max-width: 420px;
+  margin: 30px auto;
+  width: 100%;
+}
+
+.home-colors {
+  width: 100%;
+}
+
+.home-colors__line {
+  display: flex;
+  width: 100%;
+}
+
+.home-colors__cell {
+  height: 248.75px;
+  margin: 20px;
+  width: calc(100% / 3);
+}
+
+@each $key, $value in $colors {
+  .home-colors__cell--#{$key} {
+    background-color: #{$value};
+  }
+}
