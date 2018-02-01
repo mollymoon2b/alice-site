@@ -96,16 +96,18 @@ $colors: (
 }
 
 .home-colors__line {
-  display: flex;
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 1250px;
 }
 
 .home-colors__cell {
-	color: $black;
-	text-decoration: none;
-  height: 248.75px;
+  display: inline-block;
+  color: $black;
+  text-decoration: none;
+  height: 245px;
   margin: 20px;
-  width: calc(100% / 3);
+  width: 370px;
 }
 
 @each $key, $value in $colors {
@@ -118,15 +120,15 @@ $colors: (
 
 .js-hover-homepage {
   display: none;
+  background-repeat: no-repeat;
+  background-size: 100%;
   text-decoration: none;
   height: 100%;
   width: 100%;
-  background-size: 100%;
 }
 
 .hover-title {
-  color: $black;
-  text-transform: uppercase;
+  color: $white;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
