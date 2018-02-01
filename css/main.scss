@@ -117,24 +117,25 @@ $colors: (
 // Hover Home
 
 .js-hover-homepage {
-	display: none;
-	text-decoration: none;
-	height: 100%;
+  display: none;
+  text-decoration: none;
+  height: 100%;
   width: 100%;
-	background-size: 100%;
+  background-size: 100%;
 }
 
 .hover-title {
-	color: $black;
-	display: table-cell;
-	vertical-align: middle;
+  color: $black;
+  text-transform: uppercase;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
-	text-decoration: none;
+  text-decoration: none;
   width: 100%;
 }
 
 .hover-text {
-	color: $black;
+  color: $black;
   display: block;
-	text-decoration: none;
+  text-decoration: none;
 }
