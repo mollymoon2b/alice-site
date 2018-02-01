@@ -18,6 +18,11 @@ $greySoft: #E8E8E8;
 $brownLight: #D5C8C2;
 $brow: #A79687;
 
+$greyIOB: #E2E2E2;
+$greyLightIOB: #F8F8F8;
+$blueIOB: #7F89F9;
+$blueUltraIOB: #7EE0D9;
+
 $colors: (
   blueLight: $blueLight,
   blue: $blue,
@@ -227,4 +232,86 @@ $colors: (
   p {
     margin-bottom: 20px;
   }
+}
+
+// Page
+
+.page-content {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+// Page IOB
+
+$colorsIOB: (
+  black: $black,
+  white: $white,
+  greyLightIOB: $greyLightIOB,
+  greyIOB: $greyIOB,
+  blueIOB: $blueIOB,
+  blueUltraIOB: $blueUltraIOB,
+);
+
+.page-iob__grey {
+  background-color: $greyIOB;
+  margin-top: -5px;
+  text-align: center;
+}
+
+.page-iob-image {
+  max-width: 900px;
+  width: 100%;
+}
+
+.page-iob__large-logo {
+  height: 55px;
+  padding: 60px 0 ;
+  width: 305px;
+}
+
+.page-iob__color-line {
+  display: flex;
+  height: 60px;
+  margin: 0 auto;
+  width: 85%;
+}
+
+@each $key, $value in $colorsIOB {
+
+  .page-iob-colors--#{$key} {
+    background-color: #{$value};
+    height: 60px;
+    width: 16.666%;
+  }
+}
+
+.page-iob__image-full {
+  display: block;
+  margin: 0 auto;
+  width: 85%;
+
+  &--margin {
+    margin: 50px auto 0;
+  }
+}
+
+.page-image-full {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.page-image-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.page-image-container__50 {
+  width: 49%;
+}
+
+.separator {
+  height: 70px;
 }
