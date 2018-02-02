@@ -94,9 +94,7 @@ $colors: (
   background: white;
   cursor: pointer;
   display: block;
-  left: 0;
   position: absolute;
-  top: 0;
 }
 
 .menu-close-button {
@@ -242,22 +240,13 @@ $colors: (
   width: 100%;
 }
 
-// Page IOB
-
-$colorsIOB: (
-  black: $black,
-  white: $white,
-  greyLightIOB: $greyLightIOB,
-  greyIOB: $greyIOB,
-  blueIOB: $blueIOB,
-  blueUltraIOB: $blueUltraIOB,
-);
-
-.page-iob__grey {
+.page__grey {
   background-color: $greyIOB;
   margin-top: -5px;
   text-align: center;
 }
+
+// Page IOB
 
 .page-iob-image {
   max-width: 900px;
@@ -276,6 +265,15 @@ $colorsIOB: (
   margin: 0 auto;
   width: 85%;
 }
+
+$colorsIOB: (
+    black: $black,
+    white: $white,
+    greyLightIOB: $greyLightIOB,
+    greyIOB: $greyIOB,
+    blueIOB: $blueIOB,
+    blueUltraIOB: $blueUltraIOB,
+);
 
 @each $key, $value in $colorsIOB {
 
@@ -312,6 +310,49 @@ $colorsIOB: (
   width: 49%;
 }
 
+.page-image-container__25 {
+  width: 24%;
+}
+
+.page-image-container__33 {
+  width: 32%;
+}
+
 .separator {
   height: 70px;
+}
+
+.page__content {
+  display: table;
+  margin: 10px 25px;
+  font-size: 16px;
+}
+
+.page__small-text {
+  display: table-cell;
+  width: 30%;
+
+  p {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.page__text {
+  display: table-cell;
+  width: 65%;
+
+  p {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+
+.page-arcana {
+  text-align: center;
+}
+
+.page-arcana__logo {
+  margin: 20px auto;
 }

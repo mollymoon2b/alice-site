@@ -29,6 +29,7 @@ function createContentMenu(width, height) {
 
 if (menu) {
     menu.addEventListener('click', function() {
+				document.body.style.overflow = 'hidden';
         const divMenu =  document.getElementsByClassName('menu-content')[0]
             ? document.getElementsByClassName('menu-content')[0]
             : document.createElement('div') ;
@@ -39,14 +40,18 @@ if (menu) {
 
         const width = `${window.innerWidth}px`;
         const height = `${window.innerHeight}px`;
-
+				const scrollPosition = document.documentElement.scrollTop;
+			
         divMenu.style.height = height;
         divMenu.style.width = width;
         divMenu.className = 'menu-content';
+        divMenu.style.top = scrollPosition === 0 ? 0 :`${document.documentElement.scrollTop}px`;
+        divMenu.style.left = 0;
         divMenu.style.display = 'block';
 
         closeButton.className = 'menu-close-button js-close-menu';
         closeButton.addEventListener('click', function () {
+						document.body.style.overflow = 'initial';
             divMenu.style.display = 'none';
         });
         if (!document.getElementsByClassName('menu-link')[0]) {

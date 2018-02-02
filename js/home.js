@@ -10,7 +10,17 @@ function lanchHover(element, status) {
 		if (url) {
 			container.style.backgroundImage = `url('${url}')`;
 		}
+		container.style.opacity = 0;
 		container.style.display = status;
+		let index = 0;
+
+		var refreshId = setInterval(function() {
+			container.style.opacity = index / 10;
+			index++;
+			if (index === 10) {
+				clearInterval(refreshId);
+			}
+		}, 30);
 	}
 }
 
