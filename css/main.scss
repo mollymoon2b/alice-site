@@ -45,8 +45,19 @@ $colors: (
 
 // Font
 
+@font-face {
+	font-family: "Futura";
+	src: url('../font/futura.ttf');
+}
+
+@font-face {
+	font-family: "Futura Bold";
+	font-style: bold;
+	src: url('../font/futuraBold.ttf');
+}
+
 * {
-  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-family: "Futura";
   font-size: 24px;
   font-weight: 100;
   line-height: 26.4px;
@@ -55,7 +66,7 @@ $colors: (
 }
 
 .font-bold {
-  font-weight: bold;
+	font-family: "Futura Bold";
 }
 
 // Other scss
@@ -355,4 +366,14 @@ $colorsIOB: (
 
 .page-arcana__logo {
   margin: 20px auto;
+}
+
+.footer {
+  margin: 30px 20px;
+  text-align: center;
+}
+
+.footer-image {
+	padding: 20px;
+	cursor: pointer;
 }

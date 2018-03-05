@@ -61,3 +61,18 @@ if (menu) {
         document.body.appendChild(divMenu);
     });
 }
+
+/*const footer = document.getElementsByClassName('footer-image')[0];
+
+if (footer) {
+	footer.addEventListener('click', function() {
+		let scrollPosition = document.documentElement.scrollTop;
+		var refreshId = setInterval(function() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = scrollPosition--;
+			if (document.documentElement.scrollTop < 0) {
+				clearInterval(refreshId);
+			}
+		}, 1);
+	})
+}*/
