@@ -163,8 +163,10 @@ $colors: (
 
 .home-title {
   display: block;
+  color: $black;
   font-size: 22.5px;
   text-align: center;
+  text-decoration: none;
   padding: 25px 0;
   width: 100%;
 }
