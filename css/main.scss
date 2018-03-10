@@ -47,13 +47,13 @@ $colors: (
 
 @font-face {
 	font-family: "Futura";
-	src: url('../font/futura.ttf');
+	src: url('../font/futura.otf');
 }
 
 @font-face {
 	font-family: "Futura Bold";
 	font-style: bold;
-	src: url('../font/futuraBold.ttf');
+	src: url('../font/futuraBold.otf');
 }
 
 * {
@@ -167,13 +167,14 @@ $colors: (
   font-size: 22.5px;
   text-align: center;
   text-decoration: none;
+	text-transform: uppercase;
   padding: 25px 0;
   width: 100%;
 }
 
 .home-gradien {
   background: linear-gradient(black, white);
-  height: 625px;
+  height: 520px;
   margin: 30px auto;
   max-width: 420px;
   width: 100%;
@@ -222,6 +223,7 @@ $colors: (
   font-size: 20px;
   text-align: center;
   text-decoration: none;
+	text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
 }
@@ -230,6 +232,7 @@ $colors: (
   color: $white;
   display: block;
   font-size: 16px;
+	text-transform: lowercase;
   text-decoration: none;
 }
 
