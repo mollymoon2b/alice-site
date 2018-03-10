@@ -73,25 +73,37 @@ $colors: (
 
 // Menu
 
+
+.menu-social {
+  right: 21px;
+  position: fixed;
+  top: 37%;
+}
+
+.menu-social__image {
+	display: grid;
+	margin-bottom: 50%;
+	
+	img {
+		background: $white;
+		border-radius: 12px;
+		cursor: pointer;
+		width: 20px;
+		padding: 10px;	
+	}
+}
+
 .menu {
   background: $white;
   border-radius: 20px;
   cursor: pointer;
   height: 20px;
-  left: 30px;
+  left: 21px;
   padding: 10px 8px 6px;
   position: fixed;
   top: 45%;
   width: 20px;
   z-index: 999;
-
-  &:hover {
-    background: $black;
-
-    .menu-stripe {
-      background-color: $white;
-    }
-  }
 }
 
 .menu-stripe {
@@ -102,6 +114,16 @@ $colors: (
 }
 
 .menu-content {
+	
+    height: 759px;
+    width: 895px;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    /* margin: 0 auto; */
+    justify-content: center;
+    align-items: center;
+	
   background: white;
   cursor: pointer;
   display: block;
@@ -138,17 +160,12 @@ $colors: (
   transform: rotate(-45deg);
 }
 
-.menu-link {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .menu-link__item {
   align-self: center;
   color: $black;
   cursor: pointer;
   display: block;
+  margin: 75px 0;
   text-align: center;
   text-decoration: none;
   width: 100%;
@@ -161,6 +178,10 @@ $colors: (
 
 // HomePage
 
+.home {
+	margin: 0 75px;
+}
+
 .home-title {
   display: block;
   color: $black;
@@ -168,16 +189,16 @@ $colors: (
   text-align: center;
   text-decoration: none;
 	text-transform: uppercase;
-  padding: 25px 0;
+  padding: 35px 0 25px;
   width: 100%;
 }
 
 .home-gradien {
   background: linear-gradient(black, white);
   height: 520px;
-  margin: 30px auto;
-  max-width: 420px;
-  width: 100%;
+	display: block;
+  margin: 10px auto 30px;
+  width: calc((100% /3) - 10px);
 }
 
 .home-colors {
@@ -193,9 +214,36 @@ $colors: (
 .home-colors__cell {
   color: $black;
   height: 245px;
-  margin: 20px;
+  margin: 5px;
   text-decoration: none;
   width: calc(100% /3);
+}
+
+@media (max-width: 640px) {
+	.home-gradien {
+		display: none;
+	}
+
+	.home-colors__line {
+		display: block;
+	}
+	
+	.home-colors__cell {
+    width: 100%;
+    display: block;
+	}
+	
+	.menu-social {
+		right: 2px;
+	}
+	
+	.menu {
+		left: 9px;
+	}
+	
+	.home {
+    margin: 0 50px;
+}
 }
 
 @each $key, $value in $colors {
@@ -241,7 +289,7 @@ $colors: (
 .about {
   margin: 0 auto;
   max-width: 755px;
-  padding-top: 20%;
+  padding-top: 11%;
   width: 100%;
 
   p {
@@ -321,19 +369,22 @@ $colorsIOB: (
 .page-image-container {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 40px 0 10px;
   width: 100%;
 }
 
 .page-image-container__50 {
+  height: 100%;
   width: 49%;
 }
 
 .page-image-container__25 {
+  height: 100%;
   width: 24%;
 }
 
 .page-image-container__33 {
+  height: 100%;
   width: 32%;
 }
 
